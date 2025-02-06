@@ -1,21 +1,18 @@
-import { Rotes, Route } from "react-router-dom";
+// import { Rotes, Route } from "react-router-dom";
 
-import { AuthProvider } from "./contexts/AuthContext";
-import SignUp from "./components/auth/SignUp";
-import SingIn from "./components/auth/SingIn";
 import "./App.css";
+import Chat from "./components/chat/Chat";
+import Detail from "./components/detail/Detail";
+import List from "./components/list/List";
 
 function App() {
   return (
     <>
-      <AuthProvider>
-        <Rotes>
-        </Rotes>
-      </AuthProvider>
-
-      <SignUp />
-      <SingIn />
-      <AuthDetails />
+      <div className='container grid grid-cols-4 divide-x-1 divide-gray-500 h-[95vh]'>
+        <List />
+        <Chat />
+        <Detail />
+      </div>
     </>
   );
 }
